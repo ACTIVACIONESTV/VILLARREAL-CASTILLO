@@ -329,7 +329,7 @@ footer .footer-logo{font-family:var(--font-display);color:var(--gold-dark);font-
       <p class="section-desc">¿Tiene un proyecto en mente? Estamos listos para ayudarle a hacerlo realidad.</p>
     </div>
     <div class="contacto-grid">
-      <div class="contacto-item reveal"><span class="icon">&#9742;</span><h4>Teléfono</h4><p>[Tu número telefónico]</p></div>
+      <div class="contacto-item reveal"><span class="icon">&#9742;</span><h4>Teléfono</h4><p>834 232 5643</p></div>
       <div class="contacto-item reveal"><span class="icon">&#9993;</span><h4>Correo</h4><p>[Tu correo electrónico]</p></div>
       <div class="contacto-item reveal"><span class="icon">&#9873;</span><h4>Ubicación</h4><p>Cd. Victoria, Tamaulipas</p></div>
     </div>
@@ -339,6 +339,22 @@ footer .footer-logo{font-family:var(--font-display);color:var(--gold-dark);font-
     </a>
   </div>
 </section>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/528342325643?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20construcci%C3%B3n." class="whatsapp-float" target="_blank" title="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" fill="white" width="28" height="28"><path d="M16.004 0C7.164 0 .004 7.16.004 16c0 2.82.736 5.58 2.14 8.012L.004 32l8.188-2.088A15.92 15.92 0 0 0 16.004 32C24.844 32 32 24.84 32 16S24.844 0 16.004 0zm0 29.18a13.14 13.14 0 0 1-6.716-1.84l-.48-.288-4.988 1.272 1.332-4.868-.312-.5A13.12 13.12 0 0 1 2.824 16c0-7.272 5.92-13.18 13.18-13.18S29.18 8.728 29.18 16s-5.904 13.18-13.176 13.18zm7.228-9.868c-.396-.2-2.344-1.156-2.708-1.288-.364-.132-.628-.2-.892.2s-1.024 1.288-1.256 1.552c-.232.264-.46.296-.856.1-.396-.2-1.672-.616-3.184-1.964-1.176-1.048-1.972-2.344-2.204-2.74-.232-.396-.024-.608.176-.808.18-.18.396-.464.596-.696.2-.232.264-.396.396-.66.132-.264.068-.496-.032-.696-.1-.2-.892-2.148-1.22-2.94-.32-.772-.648-.668-.892-.68-.232-.012-.496-.016-.76-.016s-.696.1-1.06.496c-.364.396-1.392 1.36-1.392 3.316s1.424 3.848 1.624 4.112c.2.264 2.804 4.28 6.792 6.004.948.412 1.688.656 2.264.84.952.3 1.82.26 2.504.156.764-.112 2.344-.96 2.676-1.884.332-.924.332-1.716.232-1.884-.1-.164-.364-.264-.76-.46z"/></svg>
+  <span class="whatsapp-tooltip">¡Escríbenos!</span>
+</a>
+
+<style>
+.whatsapp-float{position:fixed;bottom:25px;right:25px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);z-index:9999;transition:all .3s;text-decoration:none}
+.whatsapp-float:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(37,211,102,.6)}
+.whatsapp-float::before{content:'';position:absolute;width:70px;height:70px;border-radius:50%;background:rgba(37,211,102,.3);animation:whatsappPulse 2s ease infinite}
+@keyframes whatsappPulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.4);opacity:0}}
+.whatsapp-tooltip{position:absolute;right:72px;background:#161616;color:var(--gold);padding:.5rem 1rem;border-radius:4px;font-size:.75rem;font-weight:600;letter-spacing:.1em;white-space:nowrap;opacity:0;transform:translateX(10px);transition:all .3s;pointer-events:none;border:1px solid rgba(200,164,90,.2)}
+.whatsapp-float:hover .whatsapp-tooltip{opacity:1;transform:translateX(0)}
+@media(max-width:600px){.whatsapp-float{bottom:15px;right:15px;width:55px;height:55px}.whatsapp-tooltip{display:none}}
+</style>
 
 <footer>
   <div class="footer-logo">V&C</div>
@@ -351,6 +367,9 @@ function toggleNav(){document.getElementById('navLinks').classList.toggle('activ
 function closeNav(){document.getElementById('navLinks').classList.remove('active')}
 const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -50px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
 </script>
 </body>
 </html>
